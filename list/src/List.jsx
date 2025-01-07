@@ -32,7 +32,7 @@ const List = () => {
         <input
           type="text"
           name="ListName"
-          placeholder="List Name"
+          placeholder="Name"
           onChange={handleInput}
           style={{ margin: "10px", height: "30px" }}
         />

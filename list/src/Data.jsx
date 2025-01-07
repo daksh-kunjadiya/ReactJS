@@ -19,7 +19,7 @@ const Data = ({ title, price, description, category, image, rating }) => {
         borderRadius: "20px",
         margin: "50px",
         padding: "20px",
-        display: "grid",
+        display: "flex",
         alignItems: "center",
         boxSizing: "border-box",
         boxShadow: "1px 1px 20px 1px #666666",

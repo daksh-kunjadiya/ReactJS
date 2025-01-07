@@ -5,7 +5,6 @@ const Timer = () => {
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(30);
   const [second, setSecond] = useState(0);
-
   useEffect(() => {
     const id = setInterval(() => {
       if (flag) {
@@ -24,10 +23,8 @@ const Timer = () => {
         }
       }
     }, 1000);
-
     return () => clearInterval(id);
   }, [hour, minute, second, flag]);
-
   return (
     <div>
       <h1>

@@ -7,9 +7,7 @@ const List = () => {
     Price: "",
     isCompleted: false,
   });
-
   const [list, setList] = useState([]);
-
   const handleInput = (e) => {
     const { name, value } = e.target;
     setData({
@@ -17,12 +15,10 @@ const List = () => {
       [name]: value,
     });
   };
-
   const onSubmit = (e) => {
     e.preventDefault();
     setList([...list, { ...data, id: Date.now() }]);
   };
-
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <form onSubmit={onSubmit}>

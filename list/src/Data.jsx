@@ -2,14 +2,6 @@ import React, { useState } from "react";
 
 const Data = ({ title, price, description, category, image, rating }) => {
   const [showFullBio, setShowFullBio] = useState(false);
-
-  const toggleBio = () => {
-    setShowFullBio((prevState) => !prevState);
-  };
-
-  const truncatedBio =
-    description.length > 100 ? description.slice(0, 100) + "..." : description;
-
   return (
     <div
       style={{
@@ -37,26 +29,11 @@ const Data = ({ title, price, description, category, image, rating }) => {
             alt="Product"
           />
           <h2>{title}</h2>
+          <p>Description : {description}</p>
+          <p>Price : ${price}</p>
+          <p>Category : {category}</p>
           <p>
-            Description: {showFullBio ? description : truncatedBio}{" "}
-            {description.length > 100 && (
-              <button
-                onClick={toggleBio}
-                style={{
-                  color: "blue",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                {showFullBio ? "Read less" : "Read more"}
-              </button>
-            )}
-          </p>
-          <p>Price: ${price}</p>
-          <p>Category: {category}</p>
-          <p>
-            Rating: {rating.rate} ({rating.count} reviews)
+            Rating : {rating.rate} ({rating.count} reviews)
           </p>
         </div>
       </div>

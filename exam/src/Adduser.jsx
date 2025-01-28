@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ApiLink from "./config/Api"; // Assuming this is where you define your API link
+import ApiLink from "./config/Api"; 
 
 const Adduser = () => {
   const [userdata, setuserdata] = useState({

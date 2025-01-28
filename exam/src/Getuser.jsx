@@ -7,7 +7,7 @@ const Getuser = () => {
 
   const getdata = async () => {
     try {
-      const res = await ApiLink.get("/Studentdata");
+      const res = await ApiLink.get("/Student");
       console.log(res.data);
       setdata(res.data);
     } catch (error) {
@@ -17,7 +17,7 @@ const Getuser = () => {
 
   const deletedata = async (id) => {
     try {
-      await ApiLink.delete(`/Studentdata/${id}`);
+      await ApiLink.delete(`/Student/${id}`);
       getdata();
     } catch (error) {
       console.log("Error:", error);

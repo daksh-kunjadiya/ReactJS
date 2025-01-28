@@ -16,7 +16,7 @@ const Adduser = () => {
 
   const createpost = async (userdata) => {
     try {
-      const res = await ApiLink.post("/Studentdata", userdata);
+      const res = await ApiLink.post("/Student", userdata);
       console.log(res.data);
       setuserdata({ name: "", email: "", phone: "", password: "" });
     } catch (error) {
